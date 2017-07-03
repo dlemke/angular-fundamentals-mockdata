@@ -1,0 +1,9 @@
+h1, .col-md-4 {
+    padding-left: 50px;
+}
+
+em {
+    float: right;
+    color: #E05C65;
+    padding-left: 10px;
+}
