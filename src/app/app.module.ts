@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './pages/list/list.component';
@@ -53,7 +52,6 @@ declare let jQuery: Object;
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
     ReactiveFormsModule,
     routing
   ],

@@ -3,13 +3,9 @@ import { EVENTS } from '../../assets/mockdata/mock.events';
 import { Observable, Subject } from 'rxjs/RX';
 import { IEventModel } from '../models/IEventModel';
 import { ISessionModel } from '../models/ISessionModel';
-import { Http, Response } from '@angular/http';
 
 @Injectable()
 export class EventService {
-  eventsUrl: string = 'http://localhost:3000/events/';
-
-  constructor(private http: Http) { }
 
   getMockEventData(): Observable<IEventModel[]> {
     let subject = new Subject<IEventModel[]>();
