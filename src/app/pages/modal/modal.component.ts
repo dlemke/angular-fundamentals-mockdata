@@ -1,5 +1,6 @@
-import { Component, Input, ViewChild, ElementRef, Inject } from '@angular/core';
-import { JQ_TOKEN } from '../../providers/jQuery.service';
+import { Component, Inject } from '@angular/core';
+import { MD_DIALOG_DATA } from '@angular/material';
+import { MdDialog } from '@angular/material';
 
 @Component({
   selector: 'app-modal',
@@ -7,16 +8,9 @@ import { JQ_TOKEN } from '../../providers/jQuery.service';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {
-  @Input() title: string;
-  @Input() elementId: string;
-  @Input() closeOnBodyClick: string;
-  @ViewChild('modalcontainer') containerElement: ElementRef;
-
-  constructor( @Inject(JQ_TOKEN) private $: any) { }
+  constructor( @Inject(MD_DIALOG_DATA) public foundSessions: any, private dialog: MdDialog) { }
 
   closeModal() {
-    if (this.closeOnBodyClick.toLocaleLowerCase() === 'true') {
-      this.$(this.containerElement.nativeElement).modal('hide');
-    }
+    this.dialog.closeAll();
   }
 }

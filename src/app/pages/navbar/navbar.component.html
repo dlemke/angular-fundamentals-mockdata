@@ -34,17 +34,10 @@
         <div class="form-group">
           <input type="text" [(ngModel)]="searchTerm" name="searchTerm" class="form-control" placeholder="Search Sessions">
         </div>
-        <button class="btn btn-default" model-trigger="searchResults">
+        <button class="btn btn-default">
           Search
         </button>
       </form>
     </div>
   </div>
 </div>
-<!--The closeOnBodyClick controls whether or not to close the modal window onclick which is hard-coded to true. Ideally you would want the user to control this setting.
-This could be accomplished by adding a user setting in the profile section or maybe just a simple checkbox somewhere on the page.-->
-<app-modal closeOnBodyClick="true" elementId="searchResults" title="Matching Sessions">
-  <div class="list-group">
-    <a class="list-group-item" *ngFor="let session of foundSessions" [routerLink]="['/list', session.eventId]">{{session.name}}</a>
-  </div>
-</app-modal>
