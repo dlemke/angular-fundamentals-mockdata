@@ -7,26 +7,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
-import { ListComponent } from './pages/list/list.component';
-import { ThumbnailComponent } from './pages/thumbnail/thumbnail.component';
-import { NavbarComponent } from './pages/navbar/navbar.component';
-import { DetailsComponent } from './pages/details/details.component';
-import { CreateComponent } from './pages/create/create.component';
-import { ErrorComponent } from './pages/error/error.component';
-import { SessionComponent } from './pages/session/session.component';
-import { SessionListComponent } from './pages/session-list/session-list.component';
-import { CollapsibleWellComponent } from './pages/collapsible-well/collapsible-well.component';
-import { ModalComponent } from './pages/modal/modal.component';
+import { ListComponent } from './components/list/list.component';
+import { ThumbnailComponent } from './components/thumbnail/thumbnail.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { DetailsComponent } from './components/details/details.component';
+import { CreateComponent } from './components/create/create.component';
+import { ErrorComponent } from './components/error/error.component';
+import { SessionComponent } from './components/session/session.component';
+import { SessionListComponent } from './components/session-list/session-list.component';
+import { CollapsibleWellComponent } from './components/collapsible-well/collapsible-well.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { UpvoteComponent } from './components/upvote/upvote.component';
 
 import { AuthenticationService } from './providers/authentication.service';
 import { EventService } from './providers/event.service';
 import { RouteActivatorService } from './providers/route-activator.service';
 import { ListResolverService } from './providers/list-resolver.service';
 import { VoterService } from './providers/voter.service';
-import { DurationPipe } from './formatting/duration.pipe';
+import { DurationPipe } from './pipes/duration.pipe';
 import { routing } from './app.routing';
-import { IToastrModel } from './models/IToastrModel';
-import { UpvoteComponent } from './pages/upvote/upvote.component';
 import { ValidateLocationDirective } from './directives/validate-location.directive';
 
 @NgModule({
